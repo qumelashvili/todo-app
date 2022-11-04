@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>T O D O</h1>
+        <img class="night-mode" src="./images/icon-moon.svg" alt="">
+    </header>
+    <main>
+        <section class="create-todo todo">
+            <input type="text" placeholder="Create new todo..." class="create-input">
+        </section>
+        <div class="todo-list">
+            <!--
+                FILL UP WITH JS!
+            -->
+        </div>
+        <section class="todo options">
+            <p class="hidden">
+                <span class="item">0</span>items left
+            </p>
+            <div>
+                <p class="tag">All</p>
+                <p class="tag">Active</p>
+                <p class="tag">Completed</p>
+            </div>
+            <p class="clear-completed hidden" onclick="clearCompleted()">Clear completed</p>
+        </section>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
