@@ -150,17 +150,7 @@ input:focus{
 }
 
 /* HOVER */
-.options > div p:hover{
-    color: #494C6B;
-}
-.clear-completed:hover{
-    color: #494C6B;
-}
-.night .circle:hover{
-    background: linear-gradient(#25273D, #25273D) padding-box,
-    linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
-    border: 1px solid transparent;
-}
+
 .todo:hover .cross{
     display: block;
 }
@@ -226,6 +216,18 @@ input:focus{
     }
     .night{
         background-image: url(./images/bg-desktop-dark.jpg);
+    }
+
+    .options > div p:hover{
+        color: #494C6B;
+    }
+    .clear-completed:hover{
+        color: #494C6B;
+    }
+    .night .circle:hover{
+        background: linear-gradient(#25273D, #25273D) padding-box,
+        linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+        border: 1px solid transparent;
     }
 }
 
