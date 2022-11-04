@@ -1,0 +1,237 @@
+/* Global Styles */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    background-image: url(./images/bg-mobile-light.jpg);
+    background-repeat: no-repeat;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 48px 24px;
+    background-size: 100% 200px;
+    transition: ease-in .3s;
+}
+/* Local Stlyes */
+
+/*header AREA! */
+header{
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+header img{
+    width: 20px;
+    height: 20px;
+}
+
+/* main AREA! */
+main{
+    margin-top: 40px;
+}
+.todo{
+    width: 100%;
+    min-height: 48px;
+    background: #FFFFFF;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 14px 10px 10px 20px;
+    box-sizing: border-box;
+    color: #494C6B;
+    font-size: 14px;
+}
+.create-todo input{
+    height: 100%;
+    width: 100%;
+    margin-left: 12px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;    
+}
+input[type="text"]{
+    color: #393A4B;
+}
+input::placeholder{
+    color: #9495A5;
+}
+input:focus{
+    outline: none;
+}
+.create-todo::before{
+    content: " ";
+    border: 1px solid #e3e4f1;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 25px;
+    width: 24px;
+}
+.circle{
+    border: 1px solid #E3E4F1;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 25px;
+    width: 24px;
+    transition: 1s;
+} 
+.todo-list{
+    margin-top: 16px;
+}
+.todo-list .todo{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 1px solid #E3E4F1;    
+}
+.todo-list p{
+    margin-left: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: auto;
+}
+
+/* footer/options AREA! */
+.options{
+    justify-content: center;
+}
+.options p{
+    cursor: pointer;
+}
+.options > div{
+    display: flex;
+}
+.options > div p{
+    margin-left: 10px;
+    font-weight: 700;
+    color: #9495A5;
+}
+.checked p{
+    -webkit-text-decoration-line: line-through; /* Safari */
+    text-decoration-line: line-through; 
+    color: #D1D2DA;
+}
+.checked span{
+    background:linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checked span::after{
+    content: url(./images/icon-check.svg);
+}
+.cross{
+    display: none;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+/* NIGHT MODE! */
+.night-mode{
+    cursor: pointer;
+}
+.night .night-mode{
+    content: url(./images/icon-sun.svg);
+}
+.night{
+    background-color:  hsl(235, 21%, 11%);
+    background-image: url(./images/bg-mobile-dark.jpg);
+}
+.night .todo, .night input{
+    background: #25273D;
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+    color: #C8CBE7;
+}
+.night .checked p {
+    color: #4D5067;
+}
+.night .circle, .night .create-todo::before{
+    border-color: #393A4B;
+}
+
+/* HOVER */
+.circle:hover{
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    border: 1px solid transparent;
+}
+.options > div p:hover{
+    color: #494C6B;
+}
+.clear-completed:hover{
+    color: #494C6B;
+}
+.night .circle:hover{
+    background: linear-gradient(#25273D, #25273D) padding-box,
+    linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    border: 1px solid transparent;
+}
+.todo:hover .cross{
+    display: block;
+}
+
+/* PSEUDO classes */
+.active{
+    /* applied on options p click */
+    color: #3A7CFD;
+}
+.hidden{
+    display: none;
+}
+
+
+/* media queries (breakouts: 500px, 1440px) */
+@media screen and (min-width: 500px){
+    header, main{
+        max-width: 500px;
+        margin: 10px auto;
+    }
+    .options p{
+        display: inline;
+    }
+    .options{
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width: 1440px) {
+    body{
+        background-image: url(./images/bg-desktop-light.jpg);
+        background-size: 100% 300px;
+        padding: 90px 450px;
+    }
+    header, main{
+        max-width: 100%;
+    }
+    header{
+        font-size: 26px;
+        align-items: center;
+    }
+    header img{
+        width: 26px;
+        height: 26px;
+    }
+    input{
+        font-size: 18px;
+    }
+    main{
+        margin-top: 48px;
+    }
+    .todo{
+        height: 63px;
+        padding: 20px 24px;
+    }
+    .todo-list p{
+        font-size: 18px;
+    }
+    .options span{
+        margin-right: 5px;
+    }
+    .hidden{
+        display: inline;
+    }
+    .night{
+        background-image: url(./images/bg-desktop-dark.jpg);
+    }
+}
+
+
