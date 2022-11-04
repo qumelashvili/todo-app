@@ -120,7 +120,7 @@ input:focus{
     content: url(./images/icon-check.svg);
 }
 .cross{
-    display: none;
+    display: block;
     margin-left: auto;
     cursor: pointer;
 }
@@ -147,12 +147,6 @@ input:focus{
 }
 .night .circle, .night .create-todo::before{
     border-color: #393A4B;
-}
-
-/* HOVER */
-
-.todo:hover .cross{
-    display: block;
 }
 
 /* PSEUDO classes */
@@ -217,6 +211,10 @@ input:focus{
     .night{
         background-image: url(./images/bg-desktop-dark.jpg);
     }
+    .cross{
+        display: none;
+    }
+    /* HOVER */
 
     .options > div p:hover{
         color: #494C6B;
@@ -228,6 +226,9 @@ input:focus{
         background: linear-gradient(#25273D, #25273D) padding-box,
         linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
         border: 1px solid transparent;
+    }
+    .todo:hover .cross{
+        display: block;
     }
 }
 
